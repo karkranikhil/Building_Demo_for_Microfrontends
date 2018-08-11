@@ -14,3 +14,10 @@
 ### 3) To run the app inside the Docker image
     docker build . -t header
     docker run -t -e PORT=8080 -p 8080:8080 header
+    
+### 4) to setup heroku
+    heroku create microfrontends-component-one
+    git push heroku master
+    heroku container:login
+    heroku container:push web
+    heroku open
