@@ -8,6 +8,8 @@
 
 # production
 /build
+/transpiled
+/.idea
 
 # misc
 .DS_Store
