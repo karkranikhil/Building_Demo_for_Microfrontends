@@ -1,4 +1,4 @@
-## Microfrontend Demo
+## Microfrontend Component one - header
 
 ### 1) Create react app
     npm install -g create-react-app
