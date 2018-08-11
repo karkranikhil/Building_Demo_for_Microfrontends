@@ -11,16 +11,14 @@ server.get('/', (req, res) => {
   const htmlPath = path.resolve(__dirname, 'build', 'index.html');
 
   fs.readFile(htmlPath, 'utf8', (err, html) => {
-    const rootElem = '<div id="header-root">';
+    const rootElem = '<microfrontends-header>';
     const renderedApp = renderToString(React.createElement(App, null));
-    console.log(renderedApp)
-    console.log(html.replace(rootElem, rootElem + renderedApp));
+
     res.send(html.replace(rootElem, rootElem + renderedApp));
   });
 });
 
 server.use(express.static('build'));
-
 
 const port = process.env.PORT || 8080;
 server.listen(port, () => {
